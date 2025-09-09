@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+:root {
+  --size-img: 500px;
+}
+@font-face {
+    font-family: heading;
+    src: url(/FONTS/Ostrovsky-Bold_0.otf);
+}
+
+@font-face {
+    font-family: allText;
+    src: url(/FONTS/Pepper\ Type\ -\ Steclo-ExtraLight.otf);
+}
+
+h1, h2, h3, h4{
+    font-family: heading;
+}
+
+p{
+    font-family: allText;
+}
+

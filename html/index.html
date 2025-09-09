@@ -1,0 +1,299 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./style.css" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<style>
+    
+
+
+    #split-text-container {
+      display: flex;
+      font-size: 5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .text-part {
+      display: inline-block;
+      position: relative;
+      transform: translateX(0);
+      animation-duration: 8s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
+      animation-iteration-count:unset;
+      animation-delay: 2s;
+    }
+
+    .text-part.right {
+      transform: translateX(200%);
+      animation-name: slide-in-right;
+    }
+
+    .text-part.left {
+      transform: translateX(-200%);
+      animation-name: slide-in-left;
+    }
+
+    @keyframes slide-in-left {
+    0% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+   }
+
+    @keyframes slide-in-right {
+      0% {
+        transform: translateX(200%);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+</style>
+<body>
+
+
+    <!-- страртовая страничка -->
+    <div class="overflow-hidden ">
+        <!-- арка за бонсаем-->
+        <div class="flex items-center" >
+            <div class=" mx-48">
+                <img src="/IMG/арка3.png" alt="фоновая арка" style="width: 34vw; top: 45px;">
+            </div>
+
+            <div class="" style="margin-top: 300px; z-index: 30;">
+                <h1 class="text-4xl" style="margin-left: -9vw;">Искусство Бонсай</h1>
+                <p style="margin-left: -10vw; width: 430px; 
+                font-size: 30px; text-indent: 30px; line-height: 0.9; margin-top: 10px; text-align: justify;
+                " >Бонсай — это не просто миниатюрное дерево, 
+                а целая философия, воплощенная в живом растении. 
+                Это древнее японское искусство выращивания точной 
+                копии дерева в миниатюре. Каждый бонсай рассказывает 
+                свою уникальную историю, отражая гармонию между природой и человеком, 
+                терпение и мастерство своего создателя.
+                </p>
+                <div style=" margin-left: 2vw; width: 430px; font-weight: bold; font-size: 20px; font-family: heading;margin-top: 2vh; ">
+                    <a href="#текст" >узнать больше <i class='bx bx-redo bx-rotate-180' ></i></a>
+                </div>
+                <!-- кнопка узнать больше. должна перекидывать чуть ниже -->
+                
+                
+            </div>
+        </div>
+    </div>
+
+    
+
+    <!-- надпись bonsai за аркой -->
+    <div class="absolute" style="z-index: -10;"  >
+        <h2 id="bon" class=" font-bold mt-0 mb-5" style="margin-top: -80vh; margin-left: 41vw;font-size: 90px; color: #d2d4d9;">Bon</h2>
+        <h2 id="sai" class="text-7xl font-bold mt-0 mb-5" style="margin-top: -50px; margin-left: 43vw; font-size: 90px; color: #b8bbc2; ">sai</h2>
+    </div>
+    
+    <!-- изображение бонсая, текст на арке (тут должна была быть 3д моделька, эх) -->
+    <div class="absolute top-0 left-0 w-full" >
+        <div class="max-w-4xl h-auto " style="z-index: 20; margin-left: -20vw;">
+            <img src="/IMG/бонсай.png" alt="" height="300">
+        </div>
+        <div>
+            <p  style="font-size: 30px; margin-left: 39vw; margin-top: -73vh; color: #544669; width: 200px; line-height: 0.9;"> История длиною в жизнь</p>
+            <p style="font-size: 30px; margin-left: 23vw; margin-top: 45vh; color: #544669; width: 330px; line-height: 0.9;" >Гармония в каждом листе</p>
+        </div>
+    </div>
+
+    <!-- иконки соцсетей -->
+    <div class="absolute top-0 w-full" style="margin-left: 154vh; margin-top: 20svh; color: #1a3e65; z-index: 10; font-size: 45px; width: 50px;">
+        <ul>
+            <li>
+                <a href="https://t.me/SeraphOfTheEnd_rus">
+                    <i class='bx bxl-telegram bx-tada' ></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/lei__eclipse_?igsh=Mmp6aTNsMnIwdHB4">
+                    <i class='bx bxl-instagram' ></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://mail.ru/">
+                    <i class='bx bx-at'></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- задний фон иконок соцсетей -->
+    <div class="absolute top-0 w-full" style="width: 250px; margin-left: 142vh; margin-top: 40px;">
+        <img src="/IMG/быывшие лотосы2.png" alt="">
+    </div>
+
+    <div style="z-index: -10; margin-top: -100vh;" >
+        <h2 style="font-size: 190px; z-index: -10; color: #d2d4d9; margin-left: 65vw;">
+            asia
+        </h2>
+        <h2  style="font-size: 190px; color: #a7aab1;  margin-left: 72vw; margin-top: -20vh;">
+            art
+        </h2>
+        <h2  style="font-size: 190px; color: #a7aab1; margin-top: -38vh; margin-left: 5vh;">
+            tree
+        </h2>
+    </div>
+
+    <!-- элемент звёзды -->
+    <div class="" style="margin-left: 143px; z-index: 10; margin-top: 28vh;">
+        <img src="/img/звёзды.png" alt="звёзды" style="width: 20vw;">
+    </div>
+    <a name="текст"></a>
+    <!-- текст озакомительный про бонсаи и фотка к нему -->
+    <div class=" flex items-center" style="margin-top: -10vh;" >
+        
+        <div style="margin-left: 15vw; margin-top: 5vh;">
+            
+            <h2 class="text-4xl" style="margin-left: 5vw;">Философия в миниатюре</h2>
+            <p style="width: 47vw; font-size: 30px; text-indent: 30px; text-align: justify;">Искусство бонсай зародилось в Китае более 
+                тысячи лет назад, а затем было перенято и развито 
+                японскими мастерами. В основе философии бонсай лежит 
+                стремление к созерцанию и поиску гармонии. Выращивание 
+                такого дерева — это долгий медитативный процесс, который учит 
+                терпению, внимательности и ответственности. 
+                Каждое растение является уникальным произведением живого 
+                искусства, требующим постоянной заботы и особого подхода.
+            </p>
+        </div>
+
+        <div style="margin-left: 10vw; margin-top: 10vh;">
+            <img src="/img/фон3.png" alt="" style="width: auto; height: 85vh;">
+        </div>
+    </div>
+
+
+    <!-- разновидность бонсая кенаги -->
+    <div class="flex items-center" style="margin-left: 5vw; margin-top: 13vh;">
+         <div style="z-index: 10;" >
+            <img src="/img/фон1.png" alt="фоновое изображение" style="width: auto; height: 65vh; margin-top: -5vh;">
+        </div>
+        <div style="z-index: 20; width: 15vw; margin-top: 30vh; margin-left: -15vw;">
+            <img src="/img/kengai.png" alt="">
+        </div>
+        <div style="margin-left: -18vw; margin-top: -58vh;" id="split-text-container">
+             <p class="text-part left" style="font-family: heading; font-size: 180px; color: #cbced4; ">kenagi</p>
+        </div>
+        <div style="z-index: 10; margin-top: -25vh; margin-left: -28vw;">
+            <h2 style="font-size: 45px; margin-left: -37vh; margin-top: 18vh;">Кенаги</h2>
+            <p style="font-size: 30px; text-indent: 30px; text-align: justify; width: 700px; margin-top: -30vh;">Стиль «Кенаги» или «каскад» имитирует дерево, 
+                растущее на обрыве, ствол которого склоняется далеко 
+                вниз под воздействием ветра, снега или камнепадов. 
+                Это один из самых сложных и драматичных стилей бонсай. 
+                Горшок для такого дерева обычно выбирают высокий и узкий, 
+                чтобы подчеркнуть эффект ниспадающего потока ветвей, 
+                устремляющихся ниже основания горшка, что символизирует 
+                стойкость и умение выживать в самых суровых условиях.</p>
+        </div>
+    </div>
+
+    <div class="flex items-center" style="margin-left: 5vw;">
+        
+        <div style="z-index: 10; margin-top: 25vh; margin-left: 15vw;">
+            
+            <p style="font-size: 30px; text-indent: 30px; text-align: justify; width: 700px; margin-top: -38vh; ">«Мойоги», или неформальный прямой стиль, 
+                является одним из самых популярных и распространенных. 
+                Его отличительная черта — мягко изгибающийся S-образный ствол, 
+                который сужается к вершине. Ветви расположены гармонично и 
+                сбалансированно, создавая естественный и элегантный образ. 
+                Этот стиль олицетворяет гибкость и способность адаптироваться к 
+                внешним обстоятельствам, сохраняя при этом свою внутреннюю силу и 
+                стремление к свету.</p>
+        </div>
+        <div style="margin-left: -18vw; z-index: 10;">
+            <div>
+                <img src="/img/фон2.png" alt="фоновое изображение" style="width: auto; height: 65vh; margin-top: 5vh; margin-left: 20vw;">
+            </div>
+            <div style="z-index: 20; width: 12vw; margin-left: 25vw; margin-top: -22vh;">
+                <img src="/img/moyogi.png" alt="">
+            </div>
+        </div>
+         
+        <div style="margin-left: -50vw; margin-top: -54vh;" id="split-text-container">
+            <p class="text-part right" style="font-family: heading; font-size: 180px; color: #cbced4;">moyoji</p>
+        </div>
+        <div style="margin-top: -12vh; z-index: 20;">
+            <h2 style="font-size: 45px; margin-left: -38vh; ">Мойоги</h2>
+        </div>
+        
+    </div>
+
+    <div class="flex items-center" style="margin-left: 5vw; margin-top: 13vh;">
+         <div style="z-index: 10;" >
+            <img src="/img/фон4.png" alt="фоновое изображение" style="width: auto; height: 65vh; margin-top: -5vh;">
+        </div>
+        <div style="z-index: 20; width: 15vw; margin-top: 30vh; margin-left: -15vw;">
+            <img src="/img/nejikan.png" alt="">
+        </div>
+        <div style="margin-left: -18vw; margin-top: -58vh;" id="split-text-container">
+             <p class="text-part left" style="font-family: heading; font-size: 180px; color: #cbced4; ">buy</p>
+        </div>
+        <div style="z-index: 10; margin-top: 25vh; margin-left: -6vw;">
+            <!-- <h2 style="font-size: 45px; margin-left: -37vh; margin-top: 18vh;">Кенаги</h2> -->
+            <p style="font-size: 30px; text-align: justify; width: 600px; margin-top: -30vh;">
+                приобщиться к культуре выращивания деревьев бонсай 
+                можно в нашем телеграм канале</p>
+            <a style=" font-family: heading; font-size: 40px; margin-left: 5vw; text-decoration: underline;" href="https://t.me/SeraphOfTheEnd_rus">купить бонсай <i class='bx bx-shopping-bag bx-flashing' ></i></a>
+        </div>
+    </div>
+
+
+    <div class="relative" style="margin-top: -80vh; ">
+        
+        <div style="z-index: -10;">
+            <img src="/img/горыФутер.png" alt="горы" style="width: 100%;">
+        </div>
+        <div style="z-index: 10; margin-top: -5vh; margin-left: 50%;">
+            <p style="font-size: 25px; font-weight: bold; color: white;">2025</p>
+        </div>
+        <div style="z-index: 10; margin-top: -70vh; margin-left: 20vw;">
+            <p style="font-size: 30px; width: 650px; text-align: justify;
+            text-indent: 30px;">
+                Бонсай — это больше, чем хобби; это путь самопознания и 
+                безмолвный диалог с природой. Он напоминает нам, что 
+                истинная красота заключается в простоте, естественности 
+                и балансе. Каждое миниатюрное дерево несет в себе частичку 
+                вековой мудрости и призывает нас остановиться, задуматься и 
+                найти гармонию в себе и окружающем мире.
+            </p>
+        </div>
+    </div>
+   
+
+   
+    
+    <model-viewer
+    src="/model/bonsai_tree_-_garden.glb"
+    alt="bonsai"
+    shadow-intensity="1"
+    camera-controls touch-action="pan-y"
+    camera-orbit="90deg 100deg 0em"
+    style="width: 60em; height: 100vh; z-index: 20; left: -30vw; margin-top: -70vh;"
+
+    >
+    </model-viewer>
+
+    
+
+
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+
+   
+
+
+</body>
+</html>
